@@ -9,13 +9,21 @@ public class count : MonoBehaviour
     public Touch asw;
     public Animator animator;
     public Transform trs;
-    public int energy;
-    public int energymax;
+    public bool moving;
+    public bool canattack;
+    public double energy;
+    public double energymax;
+    public int hp;
+    public int maxhp;
     public bool active;
 
     // Start is called before the first frame update
     void Start()
     {
+        moving = false;
+        canattack = true;
+        maxhp = 4;
+        hp = 4;
         energymax = 4;
         energy = energymax;
         active = true;
@@ -29,42 +37,60 @@ public class count : MonoBehaviour
     {
         if (trs.position == an.destination)
         {
+            if (moving)
+            {
+                moving = false;
+            }
 
             animator.SetBool("move", false);
-            
 
-        }
-
-        if (energy >= 1)
-        {
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                RaycastHit hit;
-                if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit)) 
+                if (energy >= 0 && moving == false)
                 {
-                    an.destination = hit.point;
-                    animator.SetBool("move", true);
-                    energy += -1;
-                }
 
-                if (Input.touchCount > 0)
+                if (Input.GetMouseButtonDown(0))
                 {
-                    asw = Input.GetTouch(0);
-
-                    if(Physics.Raycast(Camera.main.ScreenPointToRay(asw.position), out hit)) 
+                    RaycastHit hit;
+                    if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit)) 
                     {
                         an.destination = hit.point;
                         animator.SetBool("move", true);
-                        energy += -1;
+                        moving = true;
                     }
+
+                    if (Input.touchCount > 0)
+                    {
+                        asw = Input.GetTouch(0);
+
+                        if(Physics.Raycast(Camera.main.ScreenPointToRay(asw.position), out hit)) 
+                        {
+                            an.destination = hit.point;
+                            animator.SetBool("move", true);
+                            moving = true;
+                        }
+                    }
+                        
+
                 }
-                    
-
-            }
+                }
+            
         }
+        else
+        {
+            if (energy > 0)
+            {
+                energy += -0.001;
+            }
+            else
+            {
+                an.destination = trs.position;
+            }
 
-
+        }
 	   
+    }
+
+    void attack()
+    {
+
     }
 }
