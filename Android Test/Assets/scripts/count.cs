@@ -8,6 +8,7 @@ public class count : MonoBehaviour
     private NavMeshAgent an;
     public Touch asw;
     public Animator animator;
+    public GameManager gmanager;
     public Transform trs;
     public bool moving;
     public bool canattack;
@@ -40,6 +41,7 @@ public class count : MonoBehaviour
             if (moving)
             {
                 moving = false;
+                energy += -1;
             }
 
             animator.SetBool("move", false);
@@ -76,14 +78,6 @@ public class count : MonoBehaviour
         }
         else
         {
-            if (energy > 0)
-            {
-                energy += -0.001;
-            }
-            else
-            {
-                an.destination = trs.position;
-            }
 
         }
 	   
