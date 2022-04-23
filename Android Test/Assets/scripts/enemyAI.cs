@@ -8,6 +8,7 @@ public class enemyAI : MonoBehaviour
     // Start is called before the first frame update
     public int energy;
     public int maxenergy;
+    public EnemyEnergy energies;
     public bool moving;
     public bool canattack;
     public int hp;
@@ -18,8 +19,8 @@ public class enemyAI : MonoBehaviour
     private Vector3 prevcoords;
     void Start()
     {
-        maxenergy = 2;
-        radar = 8;
+        maxenergy = 1;
+        radar = 3;
         active = false;
         moving = false;
         dir = GetComponent<Transform>();
@@ -36,12 +37,12 @@ public class enemyAI : MonoBehaviour
                 attack();
 
             }
-            
+            else
+            {
+                energy += -1;
+            }
         }
-        else
-        {
 
-        }
 
 
     }

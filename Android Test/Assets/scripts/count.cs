@@ -41,12 +41,21 @@ public class count : MonoBehaviour
             if (moving)
             {
                 moving = false;
-                energy += -1;
+                if (canattack)
+                {
+                    attack();
+                    canattack = false;
+                }
+                else
+                {
+                    animator.SetBool("attack", false);
+                }
             }
+
 
             animator.SetBool("move", false);
 
-                if (energy >= 0 && moving == false)
+                if (active && moving == false)
                 {
 
                 if (Input.GetMouseButtonDown(0))
@@ -85,6 +94,7 @@ public class count : MonoBehaviour
 
     void attack()
     {
+        //animator.SetBool("attack", true);
 
     }
 }
