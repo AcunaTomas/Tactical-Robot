@@ -10,6 +10,7 @@ public class count : MonoBehaviour
     public Animator animator;
     public GameManager gmanager;
     public Transform trs;
+    public EnemyEnergy enemy;
     public bool moving;
     public bool canattack;
     public double energy;
@@ -23,8 +24,8 @@ public class count : MonoBehaviour
     {
         moving = false;
         canattack = true;
-        maxhp = 4;
-        hp = 4;
+        maxhp = 2;
+        hp = 1;
         energymax = 4;
         energy = energymax;
         active = true;
@@ -36,6 +37,13 @@ public class count : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (hp < 1)
+        {
+            gmanager.gameover();
+            Destroy(gameObject);
+
+        }
+
         if (trs.position == an.destination)
         {
             if (moving)
@@ -44,12 +52,12 @@ public class count : MonoBehaviour
                 if (canattack)
                 {
                     attack();
-                    canattack = false;
+                    enemy.energy += 1;
                 }
-                else
-                {
-                    animator.SetBool("attack", false);
-                }
+            }
+            else
+            {
+                
             }
 
 
@@ -94,7 +102,18 @@ public class count : MonoBehaviour
 
     void attack()
     {
-        //animator.SetBool("attack", true);
 
+        foreach (Transform child in enemy.trs)
+        {
+            if (Vector3.Distance(child.position, trs.position) < 1.5)
+            {
+                animator.SetBool("attack", true);
+                child.BroadcastMessage("Die");
+            }
+            else
+            {
+                animator.SetBool("attack", false);
+            }
+        }
     }
 }

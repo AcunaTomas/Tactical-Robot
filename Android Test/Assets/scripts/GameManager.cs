@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public count plyr;
-    public enemyAI enemy;
+    public EnemyEnergy enemy;
+    public Texts texto;
     public int turns;
     public int turns2;
     void Start()
@@ -17,27 +18,44 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (plyr.energy <= 0 && enemy.active == false)
+        if(enemy.trs.childCount <= 0)
+        {
+            plyr.active = false;
+            texto.txt.text = "You Winner!";
+        }
+
+
+        if (enemy.energy == enemy.maxenergy)
         {
             if (plyr.moving == false)
             {
                 plyr.active = false;
-                enemy.active = true;
-                enemy.energy = 2;
+                enemy.activateEnemies();
                 turns += 1;
             }
 
         }
         else
         {
-            if (enemy.energy <= 0 && plyr.active == false)
+            if (enemy.energy < 1 && plyr.active == false)
             {
-                enemy.active = false;
-                plyr.active = true;
-                plyr.energy = 4;
-                turns2 += 1;
+                StartCoroutine(wait());
+
             }
         }
 
+    }
+    public void gameover()
+    {
+        texto.txt.text = "You Loser!";
+    }
+
+    IEnumerator wait()
+    {
+        Debug.Log("Begin");
+        yield return new WaitForSeconds(2);
+        plyr.active = true;
+        enemy.deactivateEnemies();
+        Debug.Log("End");
     }
 }
