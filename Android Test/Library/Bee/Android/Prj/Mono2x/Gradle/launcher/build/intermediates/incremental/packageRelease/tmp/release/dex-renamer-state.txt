@@ -1,4 +1,4 @@
-#Sat Apr 23 16:18:18 ART 2022
+#Tue Apr 26 17:14:59 ART 2022
 base.0=E\:\\Proyects\\Units\\Tactical-Robot\\Android Test\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

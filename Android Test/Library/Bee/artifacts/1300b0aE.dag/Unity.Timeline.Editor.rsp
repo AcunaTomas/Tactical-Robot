@@ -408,6 +408,7 @@
 -r:"E:/Gaem/2021.3.1f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.dll"
 -r:"E:/Gaem/2021.3.1f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.Linq.dll"
 -r:"E:/Gaem/2021.3.1f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.Serialization.dll"
+-r:"E:/Proyects/Units/Tactical-Robot/Android Test/Library/PackageCache/com.unity.cinemachine@2.8.4/Runtime/ThirdParty/clipper_library.dll"
 -r:"E:/Proyects/Units/Tactical-Robot/Android Test/Library/PackageCache/com.unity.collab-proxy@1.15.15/Lib/Editor/PlasticSCM/log4netPlastic.dll"
 -r:"E:/Proyects/Units/Tactical-Robot/Android Test/Library/PackageCache/com.unity.collab-proxy@1.15.15/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
 -r:"E:/Proyects/Units/Tactical-Robot/Android Test/Library/PackageCache/com.unity.collab-proxy@1.15.15/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"

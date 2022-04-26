@@ -6,8 +6,8 @@ public class EnemyEnergy : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform trs;
-    public int energy;
-    public int maxenergy;
+    public float energy;
+    public float maxenergy;
     void Start()
     {
         trs = GetComponent<Transform>();

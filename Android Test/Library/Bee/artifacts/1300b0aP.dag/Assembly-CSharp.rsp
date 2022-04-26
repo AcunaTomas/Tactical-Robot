@@ -294,15 +294,21 @@
 -r:"E:/Gaem/2021.3.1f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.VRModule.dll"
 -r:"E:/Gaem/2021.3.1f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.WindModule.dll"
 -r:"E:/Gaem/2021.3.1f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.XRModule.dll"
+-r:"E:/Proyects/Units/Tactical-Robot/Android Test/Library/PackageCache/com.unity.cinemachine@2.8.4/Runtime/ThirdParty/clipper_library.dll"
+-r:"Library/Bee/artifacts/1300b0aP.dag/Cinemachine.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.Notifications.Android.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/UnityEngine.UI.ref.dll"
+"Assets/atta.cs"
+"Assets/scripts/Buttons.cs"
 "Assets/scripts/count.cs"
 "Assets/scripts/enemyAI.cs"
 "Assets/scripts/EnemyEnergy.cs"
 "Assets/scripts/GameManager.cs"
+"Assets/scripts/hpbars.cs"
 "Assets/scripts/menu.cs"
+"Assets/scripts/Texts.cs"
 -langversion:9.0
 
 /deterministic

@@ -57,7 +57,7 @@ public class count : MonoBehaviour
             }
             else
             {
-                
+
             }
 
 
@@ -112,7 +112,7 @@ public class count : MonoBehaviour
             }
             else
             {
-                animator.SetBool("attack", false);
+                
             }
         }
     }
