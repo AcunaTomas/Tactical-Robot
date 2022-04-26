@@ -1695,8 +1695,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -8074708081786332142, guid: 8a593f44bdfb96e47bf791a7a0d35d38,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: 6fe3c483a9b7dfb4798a6e9a74cecdb9, type: 2}
     - target: {fileID: -6343370855024242836, guid: 8a593f44bdfb96e47bf791a7a0d35d38,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -1982,6 +1981,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.000022228134
       objectReference: {fileID: 0}
+    - target: {fileID: -2981899346182721889, guid: 8a593f44bdfb96e47bf791a7a0d35d38,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fe3c483a9b7dfb4798a6e9a74cecdb9, type: 2}
     - target: {fileID: -2798456642580307184, guid: 8a593f44bdfb96e47bf791a7a0d35d38,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2137,6 +2141,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.7061879
       objectReference: {fileID: 0}
+    - target: {fileID: 519621491215695831, guid: 8a593f44bdfb96e47bf791a7a0d35d38,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fe3c483a9b7dfb4798a6e9a74cecdb9, type: 2}
     - target: {fileID: 919132149155446097, guid: 8a593f44bdfb96e47bf791a7a0d35d38,
         type: 3}
       propertyPath: m_Name
@@ -2212,6 +2221,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.0000000016096887
       objectReference: {fileID: 0}
+    - target: {fileID: 5510849795284492453, guid: 8a593f44bdfb96e47bf791a7a0d35d38,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fe3c483a9b7dfb4798a6e9a74cecdb9, type: 2}
     - target: {fileID: 7829813204683122307, guid: 8a593f44bdfb96e47bf791a7a0d35d38,
         type: 3}
       propertyPath: m_LocalScale.x
