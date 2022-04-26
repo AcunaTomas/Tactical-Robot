@@ -4,29 +4,17 @@ ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
-      74: 4723146814002874508
-    second: Armature|Attack
-  - first:
       74: 5293755333785453794
     second: Armature|EyesAngry
   - first:
-      74: -4605597506484165234
-    second: Armature|EyesHurt
-  - first:
       74: 1055437563703869128
     second: Armature|EyesNeutral
-  - first:
-      74: 8422697144948784318
-    second: Armature|EyesSleep
   - first:
       74: 7004291683667587077
     second: Armature|HeartBreak
   - first:
       74: 2113966147127076018
     second: Armature|HeartFix
-  - first:
-      74: 5057706916149630090
-    second: Armature|StartSleep
   - first:
       74: 7933569904715140662
     second: Armature|WakeUp
