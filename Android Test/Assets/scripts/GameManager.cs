@@ -8,20 +8,27 @@ public class GameManager : MonoBehaviour
     public count plyr;
     public EnemyEnergy enemy;
     public Texts texto;
+    public Buttons butt;
+    public int cond;
+    public bool stop;
     public int turns;
     public int turns2;
     void Start()
     {
-
+        cond = 2;
+        stop = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(enemy.trs.childCount <= 0)
+        if(enemy.trs.childCount <= 0 && stop == false)
         {
             plyr.active = false;
             texto.txt.text = "You Winner!";
+            stop = true;
+            cond = 1;
+            butt.but.interactable = true;
         }
 
 
@@ -47,7 +54,10 @@ public class GameManager : MonoBehaviour
     }
     public void gameover()
     {
+        stop = true;
         texto.txt.text = "You Loser!";
+        cond = 0;
+        butt.but.interactable = true;
     }
 
     IEnumerator wait()

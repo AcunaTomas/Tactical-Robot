@@ -347,6 +347,7 @@ GameObject:
   - component: {fileID: 367679001}
   - component: {fileID: 367679000}
   - component: {fileID: 367678999}
+  - component: {fileID: 367679002}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -414,11 +415,23 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 367679000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 367679002}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: Continue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &367679000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,6 +470,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367678997}
   m_CullTransparentMesh: 1
+--- !u!114 &367679002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367678997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff3646fa7d927254390dd607028e8ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  but: {fileID: 0}
+  Gman: {fileID: 855401723}
 --- !u!1 &474174193
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +924,9 @@ MonoBehaviour:
   plyr: {fileID: 50306493}
   enemy: {fileID: 252828190}
   texto: {fileID: 1850283050}
+  butt: {fileID: 367679002}
+  cond: 0
+  stop: 0
   turns: 0
   turns2: 0
 --- !u!4 &855401724
